@@ -39,7 +39,7 @@ const Navbar = (props: Props) => {
                     className='flex items-center gap-2'
                     onClick={() => handleClick('/')}
                 >
-                    <FormatColorTextIcon className='h-10 w-10 bg-white rounded-full p-1' />
+                    <FormatColorTextIcon className='h-10 w-10 bg-yellow-50 rounded-full p-1' />
                     <p className='text-2xl font-bold'>AI导航站</p>
                 </div>
                 {/* menu */}
