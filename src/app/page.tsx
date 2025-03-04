@@ -30,7 +30,7 @@ export default function Home() {
     }
   }
   return (
-    <div className="h-min-screen w-full scroll-auto">
+    <div className="h-min-screen w-full scroll-auto ">
       {/* 搜索栏 */}
       <div className="w-full h-64 flex flex-col justify-center items-center">
         <p>搜索本站内容</p>
@@ -40,7 +40,7 @@ export default function Home() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button 
+          <button
             className="h-10 rounded-md bg-blue-500 text-white px-4"
             onClick={handleSearch}
           >
@@ -92,7 +92,7 @@ export default function Home() {
                         </div>
 
 
-                        </div>
+                      </div>
 
                     </Link>
                   ))

@@ -21,29 +21,29 @@ const Navbar = (props: Props) => {
     const handleClick = (text: string) => {
         if (window.location.pathname === '/') {
             const element = document.getElementById(text)
-            element?.scrollIntoView({behavior: 'smooth'})
+            element?.scrollIntoView({ behavior: 'smooth' })
         } else {
             router.push(`/`)
             setTimeout(() => {
                 const element = document.getElementById(text)
-                element?.scrollIntoView({behavior: 'smooth'})
+                element?.scrollIntoView({ behavior: 'smooth' })
             }, 300)
         }
     }
 
-  return (
-    <div className='w-60 h-screen bg-slate-300 flex flex-col items-center gap-4 fixed'> 
-        <div className='mt-6 w-3/4 h-full flex flex-col gap-8'>
-            {/* logo */}
-            <div 
-                className='flex items-center gap-2'
-                onClick={() => handleClick('/')}
-            >
-                <FormatColorTextIcon className='h-10 w-10 bg-white rounded-full p-1' />
-                <p className='text-2xl font-bold'>AI导航站</p>
-            </div>
-            {/* menu */}
-            <div className='flex flex-col items-center justify-center w-3/4 gap-6'>
+    return (
+        <div className='w-60 h-screen bg-blue-100 flex flex-col items-center gap-4 fixed'>
+            <div className='mt-6 w-3/4 h-full flex flex-col gap-8 '>
+                {/* logo */}
+                <div
+                    className='flex items-center gap-2'
+                    onClick={() => handleClick('/')}
+                >
+                    <FormatColorTextIcon className='h-10 w-10 bg-white rounded-full p-1' />
+                    <p className='text-2xl font-bold'>AI导航站</p>
+                </div>
+                {/* menu */}
+                <div className='flex flex-col items-center justify-center w-3/4 gap-6'>
                     {/* 第一行 */}
                     <div
                         className='flex w-full h-10 items-center gap-4 cursor-pointer'
@@ -111,9 +111,9 @@ const Navbar = (props: Props) => {
                     </div>
 
                 </div>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Navbar

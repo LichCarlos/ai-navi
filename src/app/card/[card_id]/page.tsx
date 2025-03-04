@@ -25,43 +25,43 @@ type Props = {}
 
 const Card = (props: Props) => {
 
-    const params = useParams()
-    const card_id = params.card_id   
-    
-    
-    let cardData
+  const params = useParams()
+  const card_id = params.card_id
 
-    cardData = rawData.find((section: Section) => section.cards.some((card: Card) => card.id === card_id))?.cards.find((card: Card) => card.id === card_id)
+
+  let cardData
+
+  cardData = rawData.find((section: Section) => section.cards.some((card: Card) => card.id === card_id))?.cards.find((card: Card) => card.id === card_id)
 
   return (
-    <div className='w-full min-h-screen flex justify-center bg-white'>
-        <div className='flex flex-col w-2/3'>
+    <div className='w-full min-h-screen flex justify-center bg-yellow-50'>
+      <div className='flex flex-col w-2/3 mt-20'>
         {/* 第一行 */}
-        <div className='flex flex-row items-center justify-center gap-2'>
-            <Image
-                src={`/img/${cardData?.img}`}
-                alt={cardData?.name || ''}
-                width={100}
-                height={100}
-                className='rounded-lg'
-            />
-            <div className='flex flex-col items-start justify-center'>
-                <p className='text-2xl font-bold'>{cardData?.name}</p>
-                <Link href={cardData?.link || ''} className='text-sm bg-blue-500 mt-4 p-2 rounded-md text-white'>
-                    链接直达
-                </Link>
-            </div>
+        <div className='flex flex-row items-center justify-center gap-2 '>
+          <Image
+            src={`/img/${cardData?.img}`}
+            alt={cardData?.name || ''}
+            width={100}
+            height={100}
+            className='rounded-lg'
+          />
+          <div className='flex flex-col items-start justify-center '>
+            <p className='text-2xl font-bold'>{cardData?.name}</p>
+            <Link href={cardData?.link || ''} className='text-sm bg-blue-500 mt-4 p-2 rounded-md text-white'>
+              链接直达
+            </Link>
+          </div>
         </div>
         {/* 描述 */}
-        <div className='text-sm text-gray-500'>
-            {cardData?.description}
+        <div className='text-sm text-gray-500 mt-6'>
+          {cardData?.description}
         </div>
 
         {/* 广告位 */}
-        <div className='w-full h-96 bg-gray-200 rounded-lg mt-4'>
-            <p className='text-2xl font-bold'>广告位</p>
+        <div className='w-full h-96 bg-blue-100 rounded-lg mt-6'>
+          <p className='text-2xl font-bold'>广告位</p>
         </div>
-        </div>
+      </div>
 
     </div>
   )
