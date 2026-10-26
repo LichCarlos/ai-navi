@@ -107,6 +107,13 @@
                 "description": "Bolt 是一款AI编程工具，支持多种编程语言",
                 "img": "bolt.jpg",
                 "link": "https://bolt.sh"
+            },
+            {
+                "id": "404",
+                "name": "agent-qa",
+                "description": "用自然语言测试 Web、Android 和 iOS 应用，结合持久记忆、经验证的自我改进及 CLI/MCP 接口。",
+                "img": "agent-qa.png",
+                "link": "https://vostride.com"
             }
         ]
     },
